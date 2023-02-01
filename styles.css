@@ -204,6 +204,7 @@ body .container main .flags-grid .card img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 200px;
 }
 body .container main .flags-grid .card .info-container {
   padding: 0.5em 1em 2.5em 1em;
