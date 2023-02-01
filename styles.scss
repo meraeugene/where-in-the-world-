@@ -361,7 +361,7 @@ body {
 
 @media (max-width: 768px) {
   main {
-    margin: 20px 30px !important;
+    margin: 20px 10px !important;
     height: 100%;
   }
 
@@ -372,7 +372,7 @@ body {
   }
 
   header {
-    padding: 1.1em 30px !important;
+    padding: 1.1em 10px !important;
   }
 
   .flex-container {
@@ -381,6 +381,11 @@ body {
     p {
       line-height: 1.9 !important;
     }
+  }
+
+  .btn-prev,
+  .btn-next {
+    width: 100%;
   }
 
   .flag_desc {
@@ -556,7 +561,7 @@ body {
   button[disabled] {
     cursor: not-allowed;
     background-color: #495579;
-    color: var(--Title-color);
+    color: #fffbeb;
   }
 }
 
@@ -568,7 +573,7 @@ body {
   color: var(--Title-color);
   cursor: pointer;
   border: none;
-  width: 45px;
+  width: 70px;
   height: 40px;
   background-color: transparent;
 }

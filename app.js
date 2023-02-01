@@ -49,10 +49,7 @@ const displayCountryCards = (data) => {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card, index) => {
     card.addEventListener("click", () => {
-      localStorage.setItem(
-        "searchValue",
-        info[startIndex + index].name.common.trim()
-      );
+      localStorage.setItem("searchValue", info[startIndex + index].name.common);
       window.open("searchedFlag.html", "_self");
     });
   });
@@ -192,7 +189,7 @@ searchBar.addEventListener("keyup", function (event) {
   }
 
   if (searchBar.value.length > 2) {
-    fetch(`https://restcountries.com/v3.1/name/${searchBar.value}`)
+    fetch(`https://restcountries.com/v3.1/name/${searchBar.value.trim()}`)
       .then((response) => response.json())
       .then((data) => {
         searchResults.innerHTML = "";

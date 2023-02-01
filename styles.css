@@ -311,20 +311,24 @@ body .searched_flag_container .flex-container .border_countries p {
 
 @media (max-width: 768px) {
   main {
-    margin: 20px 30px !important;
+    margin: 20px 10px !important;
     height: 100%;
   }
   .filter_button .flex {
     gap: 0.7em !important;
   }
   header {
-    padding: 1.1em 30px !important;
+    padding: 1.1em 10px !important;
   }
   .flex-container {
     gap: 1.5em !important;
   }
   .flex-container p {
     line-height: 1.9 !important;
+  }
+  .btn-prev,
+.btn-next {
+    width: 100%;
   }
   .flag_desc {
     gap: 1em !important;
@@ -508,7 +512,7 @@ body .searched_flag_container .flex-container .border_countries p {
 .page-numbers button[disabled] {
   cursor: not-allowed;
   background-color: #495579;
-  color: var(--Title-color);
+  color: #fffbeb;
 }
 
 .btn-prev,
@@ -519,7 +523,7 @@ body .searched_flag_container .flex-container .border_countries p {
   color: var(--Title-color);
   cursor: pointer;
   border: none;
-  width: 45px;
+  width: 70px;
   height: 40px;
   background-color: transparent;
 }/*# sourceMappingURL=styles.css.map */
