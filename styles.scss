@@ -228,8 +228,7 @@ body {
             border-top-right-radius: 4px;
             border-top-left-radius: 4px;
             width: 100%;
-            object-fit: cover;
-            height: 200px;
+            height: 180px;
           }
 
           .info-container {
@@ -239,6 +238,9 @@ body {
               font-size: clamp(1.1rem, 0.975rem + 0.4vw, 1.2rem);
               margin-bottom: 0.575em;
               color: var(--Title-color);
+              overflow: hidden; /* Hide the overflow */
+              text-overflow: ellipsis; /* Add ellipsis when text overflows */
+              white-space: nowrap; /* Prevent text from wrapping to multiple lines */
             }
 
             p {
@@ -346,7 +348,7 @@ body {
 
       .flag_title {
         h1 {
-          font-size: clamp(1.5rem, 1.25rem + 0.8vw, 1.7rem);
+          font-size: clamp(1.3rem, 1.25rem + 0.8vw, 1rem);
           color: var(--Text-Color);
         }
       }
@@ -360,7 +362,7 @@ body {
         p {
           line-height: 1.5;
           color: var(--Text-Color);
-          font-size: clamp(1.1rem, 1rem + 0vw, 1rem);
+          font-size: clamp(1rem, 1rem + 0vw, 1rem);
         }
       }
 
@@ -396,6 +398,15 @@ body {
     height: 100%;
   }
 
+  .navigation-container {
+    gap: 0.5em !important;
+    margin-bottom: 2em !important;
+  }
+
+  .page-numbers {
+    gap: 0.3em !important;
+  }
+
   .filter_button {
     .flex {
       gap: 0.7em !important;
@@ -429,7 +440,6 @@ body {
 
   .flags-grid {
     gap: 2em !important;
-    margin-top: 3em !important;
   }
 }
 
@@ -562,7 +572,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
+  gap: 0.7em;
   width: 100%;
   margin-bottom: 3em;
 }
@@ -575,7 +585,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3em;
+  gap: 0.7em;
 
   .page-number {
     box-shadow: var(--Box-Shadow);

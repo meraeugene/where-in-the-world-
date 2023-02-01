@@ -11,7 +11,7 @@ const itemsPerPage = 20;
 const fetchFlags = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
-
+  console.log(data);
   displayCountryCards(data);
 };
 
@@ -32,7 +32,7 @@ const displayCountryCards = (data) => {
     container += `
     <div class="card">
       <div class="img-container">
-        <img src="${flag.flags.svg}" alt="" />
+        <img src="${flag.flags.png}" alt="" />
       </div>
       <div class="info-container">
         <h2>${flag.name.common}</h2>
