@@ -39,7 +39,11 @@
               type="text"
               id="searchBar"
               placeholder="Search for a country..."
+              autocomplete="off"
             />
+            <div class="popup" id="searchResults">
+              <div id="searchResultsList"></div>
+            </div>
           </div>
 
           <div class="filter_button">
@@ -50,6 +54,7 @@
 
             <div class="options">
               <ul class="countries">
+                <li data-id="All" class="country">All</li>
                 <li data-id="Africa" class="country">Africa</li>
                 <li data-id="Americas" class="country">Americas</li>
                 <li data-id="Asia" class="country">Asia</li>

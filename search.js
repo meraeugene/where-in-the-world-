@@ -2,18 +2,23 @@
 let info = [];
 const searchFlagContainer = document.querySelector(".searched_flag_container");
 const errorContainer = document.querySelector(".error");
-
-//back btn function
-const backBtn = document.querySelector("#backBtn");
-
-backBtn.addEventListener("click", () => {
-  window.open("index.html", "_self");
-});
-
+const loader = document.querySelector(".loading-main-container");
 // Retrieve the value of the search bar in new-page.html
 const searchValue = localStorage.getItem("searchValue");
 
+//bacbtn function
+const backBtn = document.querySelector("#backBtn");
+
+backBtn.addEventListener("click", () => {
+  window.history.back();
+});
+
 const fetchSpecificFlag = async (query) => {
+  // show the loader
+  loader.classList.remove("loader-hidden");
+
+  // your existing code here
+
   const url = `https://restcountries.com/v3.1/name/${query}?fullText=true`;
   const response = await fetch(url);
   const data = await response.json();
@@ -24,26 +29,37 @@ const fetchSpecificFlag = async (query) => {
 
     info = data.map((flag) => {
       //convert mo anay ang object to array gamit ang object.values mo tapos i map mo para makwa mo ang specific currencies or object that u want
-      const currencies = Object.values(flag.currencies).map(
-        (currency) => currency.name
-      );
 
-      const nativeNames = Object.values(flag.name.nativeName).map(
-        (native) => native.common
-      );
+      let currencies = "N/A";
+      if (typeof flag.currencies !== "undefined") {
+        currencies = Object.values(flag.currencies).map(
+          (currency) => currency.name
+        );
+      }
+      // check if the nativeName property is defined before trying to access it.
+      let nativeNames = "N/A";
+      if (typeof flag.name.nativeName !== "undefined") {
+        nativeNames = Object.values(flag.name.nativeName).map(
+          (native) => native.common
+        );
+      }
 
-      const languages = Object.values(flag.languages);
-      //arrange to alphabetical order with undefined values
-      languages.sort((a, b) =>
-        a !== undefined &&
-        b !== undefined &&
-        a.name !== undefined &&
-        b.name !== undefined
-          ? a.name.localeCompare(b.name)
-          : a === undefined
-          ? 1
-          : -1
-      );
+      // check if the languages property is defined before trying to access it.
+      let languages = "N/A";
+      if (typeof flag.languages !== "undefined") {
+        languages = Object.values(flag.languages);
+        //arrange to alphabetical order with undefined values
+        languages.sort((a, b) =>
+          a !== undefined &&
+          b !== undefined &&
+          a.name !== undefined &&
+          b.name !== undefined
+            ? a.name.localeCompare(b.name)
+            : a === undefined
+            ? 1
+            : -1
+        );
+      }
 
       // check if the elements in the flag.borders array are defined before trying to access them.
       const borderCountries = [];
@@ -85,7 +101,10 @@ const fetchSpecificFlag = async (query) => {
         </div>
         <div class="flag_desc">
           <div class="left_desc">
-            <p><span class="bold">Native Name:</span> ${flag.native_name}</p>
+            <p><span class="bold ">Native Name:</span> ${flag.native_name.slice(
+              0,
+              2
+            )}</p>
             <p><span class="bold">Population:</span> ${flag.population.toLocaleString()}</p>
             <p><span class="bold">Region:</span> ${flag.region}</p>
             <p><span class="bold">Sub Region:</span> ${flag.subregion}</p>
@@ -96,7 +115,9 @@ const fetchSpecificFlag = async (query) => {
               flag.top_level_domain
             }</p>
             <p><span class="bold">Currencies:</span> ${flag.currencies}</p>
-            <p><span class="bold">Languages:</span> ${flag.languages}</p>
+            <p><span class="bold languages">Languages:</span> ${
+              flag.languages
+            }</p>
           </div>
         </div>
         <div class="border_countries">
@@ -161,6 +182,20 @@ const fetchSpecificFlag = async (query) => {
         }
       }, 40);
     }, 3000);
+  }
+
+  if (data.length > 0) {
+    // hide the loader
+    loader.classList.add("loader-hidden");
+
+    // display flag information
+    // ...
+  } else {
+    // hide the loader
+    loader.classList.add("loader-hidden");
+
+    // display error message
+    // ...
   }
 };
 
