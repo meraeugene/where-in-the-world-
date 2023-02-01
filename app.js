@@ -11,6 +11,7 @@ const itemsPerPage = 20;
 const fetchFlags = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
+
   displayCountryCards(data);
 };
 
@@ -242,3 +243,7 @@ if (darkModeEnabled) {
   header.classList.toggle("darkmode");
   body.classList.toggle("darkmode");
 }
+
+// automatic date
+const date = document.querySelector("#date");
+date.innerHTML = new Date().getFullYear();

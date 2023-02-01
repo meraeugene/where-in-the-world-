@@ -179,9 +179,11 @@ body {
         position: absolute;
         left: 0px;
         width: 100%;
-        top: 50px;
+        top: 40px;
         display: none;
+        box-shadow: var(--Box-Shadow);
         background-color: var(--Background-Color);
+        z-index: 2;
         color: var(--Title-color);
         font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
 
@@ -234,13 +236,13 @@ body {
             padding: 0.5em 1em 2.5em 1em;
 
             h2 {
-              font-size: 1.3rem;
+              font-size: clamp(1.1rem, 0.975rem + 0.4vw, 1.2rem);
               margin-bottom: 0.575em;
               color: var(--Title-color);
             }
 
             p {
-              font-size: 1.1rem;
+              font-size: clamp(1rem, 0.875rem + 0.4vw, 1.1rem);
               font-weight: $weight-Mode-300;
               line-height: 1.5;
               color: var(--Text-Color);
@@ -283,6 +285,35 @@ body {
 
     .back_button:hover {
       box-shadow: var(--Box-shadow-hover);
+    }
+
+    footer {
+      .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+
+        .adjust {
+          font-size: 1.5rem;
+          top: 0px;
+          position: relative;
+          transition: 0.5s;
+          color: var(--Text-Color);
+        }
+
+        .adjust:hover {
+          top: -4px;
+          cursor: pointer;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: center;
+        color: var(--Text-Color);
+        padding-bottom: 0.5em;
+      }
     }
   }
 

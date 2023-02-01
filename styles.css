@@ -160,9 +160,11 @@ body .container main .options {
   position: absolute;
   left: 0px;
   width: 100%;
-  top: 50px;
+  top: 40px;
   display: none;
+  box-shadow: var(--Box-Shadow);
   background-color: var(--Background-Color);
+  z-index: 2;
   color: var(--Title-color);
   font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
 }
@@ -210,12 +212,12 @@ body .container main .flags-grid .card .info-container {
   padding: 0.5em 1em 2.5em 1em;
 }
 body .container main .flags-grid .card .info-container h2 {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 0.975rem + 0.4vw, 1.2rem);
   margin-bottom: 0.575em;
   color: var(--Title-color);
 }
 body .container main .flags-grid .card .info-container p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 0.875rem + 0.4vw, 1.1rem);
   font-weight: 300;
   line-height: 1.5;
   color: var(--Text-Color);
@@ -249,6 +251,29 @@ body .container .back_button {
 }
 body .container .back_button:hover {
   box-shadow: var(--Box-shadow-hover);
+}
+body .container footer .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+body .container footer .social-links .adjust {
+  font-size: 1.5rem;
+  top: 0px;
+  position: relative;
+  transition: 0.5s;
+  color: var(--Text-Color);
+}
+body .container footer .social-links .adjust:hover {
+  top: -4px;
+  cursor: pointer;
+}
+body .container footer p {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--Text-Color);
+  padding-bottom: 0.5em;
 }
 body .error {
   margin-top: 1em;
