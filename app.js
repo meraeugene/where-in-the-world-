@@ -49,7 +49,10 @@ const displayCountryCards = (data) => {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card, index) => {
     card.addEventListener("click", () => {
-      localStorage.setItem("searchValue", info[startIndex + index].name.common);
+      localStorage.setItem(
+        "searchValue",
+        info[startIndex + index].name.common.trim()
+      );
       window.open("searchedFlag.html", "_self");
     });
   });

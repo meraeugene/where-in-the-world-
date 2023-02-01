@@ -311,14 +311,14 @@ body .searched_flag_container .flex-container .border_countries p {
 
 @media (max-width: 768px) {
   main {
-    margin: 20px 10px !important;
+    margin: 20px 30px !important;
     height: 100%;
   }
   .filter_button .flex {
     gap: 0.7em !important;
   }
   header {
-    padding: 1.1em 10px !important;
+    padding: 1.1em 30px !important;
   }
   .flex-container {
     gap: 1.5em !important;
@@ -331,6 +331,10 @@ body .searched_flag_container .flex-container .border_countries p {
   }
   .searched_flag_container {
     margin-top: 2em !important;
+  }
+  .flags-grid {
+    gap: 2em !important;
+    margin-top: 3em !important;
   }
 }
 .title {
@@ -386,8 +390,8 @@ body .searched_flag_container .flex-container .border_countries p {
 }
 
 .layer.one {
-  background: #eb7d52;
   top: 1.5em;
+  background: #263159;
   /* animation */
   -webkit-animation: movedown 1.4s ease-in-out infinite;
           animation: movedown 1.4s ease-in-out infinite;
@@ -396,12 +400,12 @@ body .searched_flag_container .flex-container .border_countries p {
 }
 
 .layer.two {
-  background: #7bc9d1;
+  background: #495579;
   top: 0.75em;
 }
 
 .layer.three {
-  background: rgba(153, 214, 180, 0.7529411765);
+  background: #251749;
   /* animation */
   -webkit-animation: moveup 1.4s ease-in-out infinite;
           animation: moveup 1.4s ease-in-out infinite;
@@ -409,7 +413,7 @@ body .searched_flag_container .flex-container .border_countries p {
 
 .loading {
   text-transform: uppercase;
-  color: var(--Text-Color);
+  color: var(--Title-color);
   text-align: center;
   font-size: 1.1em;
   letter-spacing: 1.5px;
@@ -467,10 +471,6 @@ body .searched_flag_container .flex-container .border_countries p {
     top: -0.5em;
   }
 }
-.new-line {
-  color: red;
-}
-
 .card {
   cursor: pointer;
 }
@@ -481,13 +481,18 @@ body .searched_flag_container .flex-container .border_countries p {
   justify-content: center;
   gap: 0.5em;
   width: 100%;
+  margin-bottom: 3em;
+}
+
+.loading {
+  color: var(--Title-color);
 }
 
 .page-numbers {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
+  gap: 0.3em;
 }
 .page-numbers .page-number {
   box-shadow: var(--Box-Shadow);

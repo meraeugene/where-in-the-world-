@@ -6,7 +6,7 @@ const loader = document.querySelector(".loading-main-container");
 // Retrieve the value of the search bar in new-page.html
 const searchValue = localStorage.getItem("searchValue");
 
-//bacbtn function
+//backbtn function
 const backBtn = document.querySelector("#backBtn");
 
 backBtn.addEventListener("click", () => {
