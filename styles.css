@@ -311,14 +311,14 @@ body .searched_flag_container .flex-container .border_countries p {
 
 @media (max-width: 768px) {
   main {
-    margin: 20px 10px !important;
+    margin: 20px 15px !important;
     height: 100%;
   }
   .filter_button .flex {
     gap: 0.7em !important;
   }
   header {
-    padding: 1.1em 10px !important;
+    padding: 1.1em 15px !important;
   }
   .flex-container {
     gap: 1.5em !important;

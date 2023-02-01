@@ -10,7 +10,7 @@ const searchValue = localStorage.getItem("searchValue");
 const backBtn = document.querySelector("#backBtn");
 
 backBtn.addEventListener("click", () => {
-  window.history.back();
+  window.open("index.html", "_self");
 });
 
 const fetchSpecificFlag = async (query) => {

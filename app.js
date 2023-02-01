@@ -182,14 +182,6 @@ const searchBar = document.getElementById("searchBar");
 const searchResults = document.getElementById("searchResults");
 const searchResultsList = document.getElementById("searchResultsList");
 
-window.onload = function () {
-  searchBar.value = "";
-  const searchValue = localStorage.getItem("searchValue");
-  if (searchValue) {
-    localStorage.setItem("searchValue", searchValue.trim());
-  }
-};
-
 searchBar.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     localStorage.setItem("searchValue", searchBar.value.trim());
