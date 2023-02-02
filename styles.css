@@ -88,7 +88,7 @@ body .container main .search_bar_and_filter_button .search_bar {
   align-items: center;
   gap: 0.5em;
   border-radius: 4px;
-  padding: 0.9em;
+  padding: 12px 6px;
   font-size: clamp(0.8rem, 0.55rem + 0.8vw, 1rem);
   position: relative;
   box-shadow: var(--Box-Shadow);
@@ -134,7 +134,7 @@ body .container main .search_bar_and_filter_button .search_bar:hover {
 body .container main .search_bar_and_filter_button .filter_button {
   cursor: pointer;
   position: relative;
-  padding: 0.8em 0.9em;
+  padding: 12px;
   border-radius: 4px;
   color: var(--Title-color);
   font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
