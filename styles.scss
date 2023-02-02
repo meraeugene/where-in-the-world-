@@ -20,12 +20,11 @@ $weight-Mode-800: 800;
   --Background-Color: #251749;
   --Dark-Mode-Elements: hsl(209, 23%, 22%);
   --Text-Input-Color: hsl(0, 0%, 100%);
-  --Box-Shadow: 0px 1px 5px rgba(255, 251, 235, 0.1),
-    0px 1px 5px rgba(255, 251, 235, 0.1);
+  --Box-Shadow: 0px 1px 3px rgba(255, 251, 235, 0.1),
+    0px 1px 3px rgba(255, 251, 235, 0.1);
   --Moon-Color: hsl(0, 0%, 98%);
   --Hover: #495579;
-  --Box-shadow-hover: 0px 3px 12px rgba(255, 251, 235, 0.1),
-    0px 1px 15px rgba(255, 251, 235, 0.1);
+  --Box-shadow-hover: 0px 2px 5px rgba(255, 251, 235, 0.4);
 }
 
 :root {
@@ -186,14 +185,14 @@ body {
         z-index: 2;
         color: var(--Title-color);
         font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
-
+        padding: 0.5em 0;
         ul {
           list-style: none;
           font-weight: $weight-Mode-600;
         }
 
         li {
-          padding: 0.3em 1em;
+          padding: 0.5em 0.8em;
           overflow: hidden;
           opacity: 0.7;
           transition: 0.2s;
@@ -211,32 +210,41 @@ body {
 
       .flags-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 3em;
-        margin-top: 2em;
-        margin-bottom: 2em;
+        margin-top: 3em;
+        margin-bottom: 5em;
 
         .card {
-          box-shadow: var(--Box-Shadow);
-          border-radius: 4px;
           color: var(--Text-Color);
-          transition: 0.3s ease;
-          top: 0px;
           position: relative;
 
-          img {
-            border-top-right-radius: 4px;
-            border-top-left-radius: 4px;
-            width: 100%;
-            height: 180px;
+          .img-container {
+            img {
+              width: 100%;
+              height: 180px;
+              border-radius: 6px;
+              box-shadow: var(--Box-Shadow);
+              transition: 0.3s linear;
+            }
           }
 
           .info-container {
-            padding: 0.5em 1em 2.5em 1em;
+            position: absolute;
+            width: 70%;
+            opacity: 0;
+            bottom: -40%;
+            left: 0%;
+            transition: 0.3s ease-in-out;
+            background-color: var(--Background-Color);
+            padding: 0.7em 0.7em;
+            cursor: pointer;
+            border-radius: 4px;
+            box-shadow: var(--Box-shadow-hover);
 
             h2 {
-              font-size: clamp(1.1rem, 0.975rem + 0.4vw, 1.2rem);
-              margin-bottom: 0.575em;
+              font-size: clamp(1rem, 0.875rem + 0.4vw, 1.1rem);
+              margin-bottom: 0.375em;
               color: var(--Title-color);
               overflow: hidden; /* Hide the overflow */
               text-overflow: ellipsis; /* Add ellipsis when text overflows */
@@ -244,10 +252,13 @@ body {
             }
 
             p {
-              font-size: clamp(1rem, 0.875rem + 0.4vw, 1.1rem);
+              font-size: clamp(1rem, 1rem + 0vw, 1rem);
               font-weight: $weight-Mode-300;
               line-height: 1.5;
               color: var(--Text-Color);
+              overflow: hidden; /* Hide the overflow */
+              text-overflow: ellipsis; /* Add ellipsis when text overflows */
+              white-space: nowrap; /* Prevent text from wrapping to multiple lines */
             }
 
             span {
@@ -256,9 +267,14 @@ body {
           }
         }
 
-        .card:hover {
+        .card:hover .info-container {
+          opacity: 1;
+          bottom: -15%;
+          left: 5%;
+        }
+
+        .card:hover img {
           box-shadow: var(--Box-shadow-hover);
-          top: -4px;
         }
       }
 
@@ -440,6 +456,16 @@ body {
 
   .flags-grid {
     gap: 2em !important;
+  }
+
+  .info-container {
+    opacity: 1 !important;
+    top: 0% !important;
+    width: 100% !important;
+    padding: 0.5em 0em !important;
+    position: static !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
   }
 }
 
