@@ -230,3 +230,7 @@ const title = document.querySelector(".title");
 title.addEventListener("click", () => {
   window.open("index.html", "_self");
 });
+
+// automatic date
+const date = document.querySelector("#date");
+date.innerHTML = new Date().getFullYear();

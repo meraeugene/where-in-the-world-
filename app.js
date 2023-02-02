@@ -159,7 +159,9 @@ filterBtn.addEventListener("click", () => {
       let container = "";
 
       filteredInfo.forEach((flag) => {
-        container += `<div class="card">
+        container += `<div class="card" onclick="localStorage.setItem('searchValue', '${
+          flag.name.common
+        }'); window.open('searchedFlag.html', '_self')">
             <div class="img-container">
               <img src="${flag.flags.svg}" alt="" />
             </div>
