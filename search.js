@@ -170,7 +170,7 @@ const fetchSpecificFlag = async (query) => {
     setTimeout(() => {
       let k = 0;
       const message =
-        "Naknampucha may country ba na ganon? Omay naman par eh...";
+        "Sorry, we couldn't find any results for your search. Please try again with a different keyword or check your spelling and try again.";
       const interval = setInterval(() => {
         if (k === 0) {
           errorContainer.innerHTML = "";
@@ -180,7 +180,7 @@ const fetchSpecificFlag = async (query) => {
         if (k === message.length) {
           clearInterval(interval);
         }
-      }, 40);
+      }, 30);
     }, 3000);
   }
 
