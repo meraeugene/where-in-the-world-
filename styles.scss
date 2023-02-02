@@ -153,6 +153,9 @@ body {
           font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
           box-shadow: var(--Box-Shadow);
           transition: 0.3s ease;
+          background-color: var(--Background-Color);
+          border: none;
+          text-align: left;
 
           .flex {
             display: flex;
@@ -414,6 +417,10 @@ body {
     height: 100%;
   }
 
+  .img-container img {
+    box-shadow: none !important;
+  }
+
   .navigation-container {
     gap: 0.5em !important;
     margin-bottom: 2em !important;
@@ -424,6 +431,9 @@ body {
   }
 
   .filter_button {
+    background-color: var(--Background-Color);
+    border: none;
+    text-align: left;
     .flex {
       gap: 0.7em !important;
     }
@@ -456,6 +466,7 @@ body {
 
   .flags-grid {
     gap: 2em !important;
+    margin-bottom: 2em !important;
   }
 
   .info-container {
@@ -621,7 +632,7 @@ body {
     font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
     cursor: pointer;
     border: none;
-    width: 40px;
+    width: 34px;
     height: 40px;
   }
 

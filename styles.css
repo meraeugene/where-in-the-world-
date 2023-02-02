@@ -139,6 +139,9 @@ body .container main .search_bar_and_filter_button .filter_button {
   font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
   box-shadow: var(--Box-Shadow);
   transition: 0.3s ease;
+  background-color: var(--Background-Color);
+  border: none;
+  text-align: left;
 }
 body .container main .search_bar_and_filter_button .filter_button .flex {
   display: flex;
@@ -354,12 +357,20 @@ body .searched_flag_container .flex-container .border_countries p {
     margin: 20px 15px !important;
     height: 100%;
   }
+  .img-container img {
+    box-shadow: none !important;
+  }
   .navigation-container {
     gap: 0.5em !important;
     margin-bottom: 2em !important;
   }
   .page-numbers {
     gap: 0.3em !important;
+  }
+  .filter_button {
+    background-color: var(--Background-Color);
+    border: none;
+    text-align: left;
   }
   .filter_button .flex {
     gap: 0.7em !important;
@@ -385,6 +396,7 @@ body .searched_flag_container .flex-container .border_countries p {
   }
   .flags-grid {
     gap: 2em !important;
+    margin-bottom: 2em !important;
   }
   .info-container {
     opacity: 1 !important;
@@ -561,7 +573,7 @@ body .searched_flag_container .flex-container .border_countries p {
   font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
   cursor: pointer;
   border: none;
-  width: 40px;
+  width: 34px;
   height: 40px;
 }
 .page-numbers button[disabled] {
