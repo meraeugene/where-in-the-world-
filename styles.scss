@@ -67,7 +67,8 @@ body {
         cursor: pointer;
         display: flex;
         align-items: center;
-
+        background-color: transparent;
+        border: none;
         p {
           font-weight: $weight-Mode-600;
           font-size: clamp(0.8rem, 1.7219rem + -2.95vw, 0.0625rem);
@@ -153,7 +154,7 @@ body {
           font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
           box-shadow: var(--Box-Shadow);
           transition: 0.3s ease;
-          background-color: var(--Background-Color);
+          background-color: transparent;
           border: none;
           text-align: left;
 
@@ -291,7 +292,7 @@ body {
       align-items: center;
       box-shadow: var(--Box-Shadow);
       border: none;
-      background-color: var(--Background-Color);
+      background-color: transparent;
       cursor: pointer;
       font-size: 0.9rem;
       border-radius: 4px;
@@ -431,7 +432,7 @@ body {
   }
 
   .filter_button {
-    background-color: var(--Background-Color);
+    background-color: transparent;
     border: none;
     text-align: left;
     .flex {

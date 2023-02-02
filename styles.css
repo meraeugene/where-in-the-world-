@@ -57,6 +57,8 @@ body .container header .dark-mode {
   cursor: pointer;
   display: flex;
   align-items: center;
+  background-color: transparent;
+  border: none;
 }
 body .container header .dark-mode p {
   font-weight: 600;
@@ -139,7 +141,7 @@ body .container main .search_bar_and_filter_button .filter_button {
   font-size: clamp(0.9rem, 0.55rem + 0.8vw, 1rem);
   box-shadow: var(--Box-Shadow);
   transition: 0.3s ease;
-  background-color: var(--Background-Color);
+  background-color: transparent;
   border: none;
   text-align: left;
 }
@@ -255,7 +257,7 @@ body .container .back_button {
   align-items: center;
   box-shadow: var(--Box-Shadow);
   border: none;
-  background-color: var(--Background-Color);
+  background-color: transparent;
   cursor: pointer;
   font-size: 0.9rem;
   border-radius: 4px;
@@ -368,7 +370,7 @@ body .searched_flag_container .flex-container .border_countries p {
     gap: 0.3em !important;
   }
   .filter_button {
-    background-color: var(--Background-Color);
+    background-color: transparent;
     border: none;
     text-align: left;
   }
