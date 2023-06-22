@@ -11,7 +11,7 @@
 .darkmode {
   --Text-Color: #fffbeb;
   --Title-color: hsl(0, 0%, 100%);
-  --Background-Color: #251749;
+  --Background-Color: #121212;
   --Dark-Mode-Elements: hsl(209, 23%, 22%);
   --Text-Input-Color: hsl(0, 0%, 100%);
   --Box-Shadow: 0px 1px 3px rgba(255, 251, 235, 0.1),
