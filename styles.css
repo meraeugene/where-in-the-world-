@@ -580,7 +580,7 @@ body .searched_flag_container .flex-container .border_countries p {
 }
 .page-numbers button[disabled] {
   cursor: not-allowed;
-  background-color: #495579;
+  background-color: #000000;
   color: #fffbeb;
 }
 
